@@ -1,11 +1,16 @@
 ---
-const platforms = ["github", "linkedin"];
-const handles = ["Henry-Denny", "henry-denny"];
+import Social from './Social.astro'
 ---
 
 <footer>
-  <p>
-    Learn more about my projects on <a href={`https://www.${platforms[0]}.com/${handles[0]}`}>{platforms[0]}</a>!
-    You can also find me on <a href={`https://www.${platforms[1]}.com/in/${handles[1]}`}>{platforms[1]}</a>
-  </p>
+  <Social platform="github" username="Henry-Denny" />
+  <Social platform="youtube" username="@henrydenny" />
 </footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
